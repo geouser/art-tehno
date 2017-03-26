@@ -25,6 +25,18 @@ function exist(el){
 
 jQuery(document).ready(function($) {
 
+
+    /*---------------------------
+                                  Sliders
+    ---------------------------*/
+
+    $('.assortment-slider').slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 1
+    })
+
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
