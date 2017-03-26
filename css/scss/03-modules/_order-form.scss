@@ -1,0 +1,53 @@
+.order-form {
+    background-color: #fff;
+    box-shadow: 0px 0px 60px 0px rgba(17, 17, 17, 0.08);
+    padding: 30px 40px 40px;
+    text-align: center;
+
+    &--mini {
+        padding: 20px 30px 30px;
+
+        .button {
+            height: 45px;
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid #EBEBEB;
+        height: 45px;
+        padding: 0 15px;
+        font-weight: 300;
+        font-size: 14px;
+        color: #999999;
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .form-group {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .flex-row {
+        margin: 0 -10px;
+
+        [class*='col-'] {
+            padding: 0 10px;
+        }
+    }
+}
