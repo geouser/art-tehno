@@ -88,29 +88,30 @@ jQuery(document).ready(function($) {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
         }, 800);
+        $('.menu-button').removeClass('active');
+        $('.mainHeader').removeClass('active');
         return false;
     });
 
     /*---------------------------
                                 ACTIVATE MENU ITEM OVER CURRENT SECTION
     ---------------------------*/
-    var $sections = $('section');
-    $(window).scroll(function(){
-        var currentScroll = $(this).scrollTop();
-        var $currentSection;
-        var windowHalf = $(window).height() / 2;
-        
-        $sections.each(function(){
-          var divPosition = $(this).offset().top - windowHalf;
-          
-          if( divPosition - 1 < currentScroll ){
-            $currentSection = $(this);
-          }
-        var id = $currentSection.attr('id');
-          $('a').removeClass('active');
-          $("[href=#"+id+"]").addClass('active');
-        })
-    });
+    $(document).on("scroll", onScroll);
+
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('.mainNav a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top - 200 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.mainNav a').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
 
     /*---------------------------
                                   MENU TOGGLE
@@ -120,10 +121,10 @@ jQuery(document).ready(function($) {
         $(this).toggleClass('active');
         $(this).siblings('header').toggleClass('active');
         if ($('header').hasClass('active')) {
-                $('body').css('overflow', 'hidden');
-            } else {
-                $('body').css('overflow', 'visible');
-            }
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'visible');
+        }
     });
 
 
