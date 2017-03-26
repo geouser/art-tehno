@@ -2,6 +2,10 @@
     padding: 0 70px;
     margin-bottom: 0;
 
+    @media (max-width: 900px) {
+        padding: 0 40px;
+    }
+
     .slick-arrow {
         width: 50px;
         height: 50px;
@@ -12,6 +16,12 @@
         transition: all 0.3s ease;
         background-size: 10px auto;
         border-radius: 0;
+
+        @media (max-width: 900px) {
+            width: 30px;
+            height: 30px;
+            background-size: 6px auto;
+        }
 
         &:hover {
             background-color: $green;
@@ -62,6 +72,10 @@
 
         &__caption {
             font-size: 16px;
+
+            @media (max-width: 439px) {
+                text-align: center;
+            }
         }
     }
 }
@@ -70,17 +84,37 @@
 .assortment-colors {
     width: 770px;
     display: block;
+    max-width: 100%;
     margin: 65px auto 0;
+
+    .flex-row {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        @media (max-width: 550px) {
+            margin: 0 -5px;
+        }
+    }
 
     img {
         display: block;
         border-radius: 50%;
         margin: 0 auto;
+        max-width: 100%;
     }
 
     .colors-grid__item {
         width: 12.5%;
         margin: 10px 0;
+
+        @media (max-width: 767px) {
+            width: 16.66%;
+        }
+
+        @media (max-width: 550px) {
+            padding: 0 5px;
+        }
     }
 
     p {
@@ -95,12 +129,46 @@
         border: 0;
         border-bottom: 1px solid #EDEDED;
         margin: 75px auto;
+
+        @media (max-width: 767px) {
+            margin: 40px auto;
+        }
     }
 }
 
 
 
 .coating-features {
+    
+    .flex-row {
+        @media (max-width: 1000px) {
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }    
+    }
+    
+    @media (max-width: 1000px) {
+        .col-2 {
+            width: 25%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .col-2 {
+            width: 33.33%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .col-2 {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+
     .image {
         margin: 0;
         display: block;
@@ -116,6 +184,10 @@
         margin-top: 13px;
         line-height: 22px;
         letter-spacing: 0.02em;
+
+        @media (max-width: 400px) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -124,12 +196,44 @@
 .coating-scheme {
     position: relative;
 
+    @media (max-width: 1200px) {
+        @include flex($alignI: flex-start, $justify: center);
+        margin: 60px -15px 0;
+    }
+
+    @media (max-width: 767px) {
+        margin: 60px -5px 0;
+    }
+
     .bg-image {
         display: block;
         margin: 0 auto;
+
+        @media (max-width: 1200px) {
+            display: none;
+            margin-bottom: -25px;
+        }
     }
 
     &-item {
+        @media (max-width: 1200px) {
+            width: 25%;
+            padding: 0 15px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 767px) {
+            width: 33.33%;
+
+            @media (max-width: 767px) {
+                padding: 0 5px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            width: 50%;
+        }
+
         .icon {
             width: 70px;
             height: 70px;
@@ -138,6 +242,11 @@
             line-height: 66px;
             border-radius: 50%;
             margin: 0;
+
+            @media (max-width: 1200px) {
+                margin: 0 auto 10px;
+                display: block;
+            }
 
             img {
                 display: inline-block;
@@ -150,6 +259,16 @@
             font-weight: 600;
             line-height: 26px;
             letter-spacing: 0.02em;
+
+            @media (max-width: 991px) {
+                font-size: 16px;
+                line-height: normal;
+                letter-spacing: normal;
+            }
+
+            @media (max-width: 450px) {
+                font-size: 14px;
+            }
         }
     }
 

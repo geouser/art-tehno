@@ -109,6 +109,18 @@ h1 {
   .pre-title {
     font-size: 26px;
     margin-bottom: 17px;
+
+    @media (max-width: 991px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -156,6 +168,7 @@ section {
 
 section {
   padding: 70px 0 80px;
+  overflow: hidden;
 
   @media (max-width: 767px) {
     padding: 40px 0;
