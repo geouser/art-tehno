@@ -2,6 +2,10 @@
     counter-reset: list;
     margin: -10px 0 85px;
 
+    @media (max-width: 767px) {
+        margin: 0 0 40px;
+    }
+
     &__item {
         list-style: none;
         text-align: left;
@@ -9,6 +13,19 @@
         font-size: 16px;
         line-height: 22px;
         letter-spacing: 0.01em;
+
+        @media (max-width: 991px) {
+            width: 50%;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: normal;
+        }
+
+        @media (max-width: 650px) {
+            width: 100%;
+        }
 
         @include flex($alignI: center);
 
@@ -26,18 +43,33 @@
             font-weight: 800;
             font-size: 30px;
             margin-right: 15px;
+
+            @media (max-width: 767px) {
+                width: 50px;
+                height: 50px;
+                border-width: 5px;
+                font-size: 22px;
+                line-height: 40px;
+                margin-right: 10px;
+            }
         }
 
         span {
             width: -webkit-calc(100% - 85px);
             width: calc(100% - 85px);
+
+            @media (max-width: 767px) {
+                width: -webkit-calc(100% - 60px);
+                width: calc(100% - 60px);
+            }
         }
     }
 }
 
 
 .profits-offer {
-    width: 630px;
+    width: 770px;
+    padding: 0 70px;
     max-width: 100%;
     display: block;
     margin: 0 auto;
@@ -50,13 +82,31 @@
     z-index: 1;
     margin-bottom: 35px;
 
+    @media (max-width: 991px) {
+        font-size: 18px;
+        border: 6px solid $red;
+        padding: 15px;
+        width: auto;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
     p {
         background-color: #fff;
         padding: 5px 0;
+
+        @media (max-width: 767px) {
+            background-color: transparent;
+        }
     }
 
     b {
         font-size: 26px;
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+        }
     }
 
     &:before {
@@ -66,11 +116,15 @@
         border: 10px solid $red;
         position: absolute;
         top: 50%;
-        left: -70px;
+        left: 0;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         transform: translateY(-50%);
         z-index: -1;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
     }
 }

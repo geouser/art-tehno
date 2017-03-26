@@ -56,6 +56,26 @@ h1 {
     font-size: 36px;
     font-weight: 600;
 
+    @media (max-width: 1200px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 28px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 20px;
+    }
+
     b {
       font-weight: 800;
     }
@@ -98,6 +118,10 @@ section {
 
 section {
   padding: 70px 0 80px;
+
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
 }
 
 

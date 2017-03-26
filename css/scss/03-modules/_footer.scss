@@ -3,9 +3,13 @@
     position: relative;
     padding: 70px 0 80px;
 
+    @media (max-width: 767px) {
+        padding-bottom: 0;
+    }
+
     .map {
         width: 50%;
-        position: absolute;
+        position: absolute!important;
         top: 0;
         right: 0;
         bottom: 0;
@@ -15,10 +19,22 @@
         .gmnoprint {
             display: none!important;
         }
+
+        @media (max-width: 767px) {
+            position: relative!important;
+            height: 250px;
+            width: 100%;
+        }
     }
 
     .wrapper {
         text-align: left;
+
+        @media (max-width: 767px) {
+            .col-6 {
+                width: 100%;
+            }
+        }
     }
 
     &-title {
@@ -56,4 +72,33 @@
             text-decoration: underline;
         }
     }
+
+    .order-form {
+        @media (max-width: 991px) {
+            .col-6 {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 70px;
+
+            .col-6 {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            margin-bottom: 50px;
+
+            .col-6 {
+                width: 100%;
+            }
+        }
+    }
+
 }

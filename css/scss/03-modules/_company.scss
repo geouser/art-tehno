@@ -4,6 +4,10 @@
     background-position: 50% 50%;
 
     &-list {
+        @media (max-width: 767px) {
+            @include flex($alignI: flex-start);
+        }
+
         &__item {
             padding-left: 50%;
             text-align: left;
@@ -12,6 +16,11 @@
             position: relative;
             min-height: 100px;
             margin: 30px 0;
+
+            @media (max-width: 767px) {
+                width: 50%;
+                padding: 0 15px;
+            }
 
             .icon {
                 width: 100px;
@@ -28,6 +37,16 @@
                 -o-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
 
+                @media (max-width: 767px) {
+                    position: static;
+                    -webkit-transform: none;
+                    -ms-transform: none;
+                    -o-transform: none;
+                    transform: none;
+                    display: block;
+                    margin: 0 auto;
+                }
+
                 &:after {
                     content: '';
                     width: 45px;
@@ -37,6 +56,10 @@
                     left: 100%;
                     top: 50%;
                     margin-top: -3px;
+
+                    @media (max-width: 767px) {
+                        display: none;
+                    }
                 }
 
                 img {
@@ -55,10 +78,26 @@
                 transform: translateY(-50%);
                 padding-left: 85px;
 
+                @media (max-width: 767px) {
+                    position: static;
+                    -webkit-transform: none;
+                    -ms-transform: none;
+                    -o-transform: none;
+                    transform: none;
+                    width: 100%;
+                    padding-left: 0;
+                    text-align: center;
+                }
+
                 span {
                     display: block;
                     border-left: 6px solid $green;
                     padding-left: 15px;
+
+                    @media (max-width: 767px) {
+                        border: 0;
+                        padding: 0;
+                    }
                 }
             }
 
