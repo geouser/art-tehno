@@ -17,7 +17,20 @@ b,
 strong {
   font-weight: bold;
 }
-
+h1 {
+  font-size: 52px;
+  line-height: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  &:after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 170px;
+    background-color: $red;
+    margin-top: 30px;
+  }
+}
 .red {
   color: $red;
 }
@@ -29,6 +42,11 @@ strong {
   color: #fff;
 }
 
+.title {
+  &.white {
+    color: #FFF;
+  }
+}
 
 .section-title {
   margin-bottom: 40px;
@@ -47,6 +65,21 @@ strong {
     font-size: 26px;
     margin-bottom: 17px;
   }
+}
+
+section {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 10%;
 }
 
 // lAYOUT

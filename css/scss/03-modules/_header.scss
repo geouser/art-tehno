@@ -1,18 +1,42 @@
          
 .mainHeader {
-    @include position(absolute, 0, 0, auto, 0);
-    /*@include transition(all, .4s);*/
-    height: 100px;
-    
-    background: #2C3840;
-    
+    @include position(fixed, 0, 0, auto, 0);
+    @include transition(all, .4s);
+    height: 70px;
+    z-index: 100;
     .wrapper {
         height: 100%;
         @include flex();
+        border-bottom: 1px solid #7D7478;
+        padding: 0;
+        @include transition(all, .2s);
     }
-
+    &.hasScrolled {
+        background-color: #3d3d3d;
+        .wrapper {
+            border-color: transparent;
+        }
+    }
     &__info {
         color: #fff;
+        text-align: right;
+        a {
+            display: block;
+            font-size: 22px;
+            font-weight: 600;
+            &.dashed {
+                color: $green;
+                font-size: 14px;
+                font-weight: 600;
+                border-bottom: 1px dashed $green;
+                display: inline-block;
+                @include transition(all, .2s);
+                &:hover {
+                    color: #FFF;
+                    border-color: #fff;
+                }
+            }
+        }
     }
 }
 
@@ -25,9 +49,24 @@
         li {
             display: inline-block;
             vertical-align: middle;
-            margin: 0 10px;
+            margin: 0 14px;
             a {
                 color: #fff;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding-bottom: 4px;
+                display: inline-block;
+                border-bottom: 2px solid transparent;
+                @include transition(all, .2s);
+                &:hover{
+                    border-color: $green;
+                }
+            }
+            &.active {
+                a {
+                    border-color: $green;
+                }
             }
         }
     }
@@ -51,6 +90,13 @@
     color: #fff;
 }
 
+.logo {
+    width: 200px;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
 
 /* ------------------------------------ */
 /*  MENU BUTTON  */
