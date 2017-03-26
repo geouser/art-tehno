@@ -42,6 +42,11 @@ h1 {
   color: #fff;
 }
 
+.title {
+  &.white {
+    color: #FFF;
+  }
+}
 
 .section-title {
   margin-bottom: 40px;
@@ -55,6 +60,14 @@ h1 {
       font-weight: 800;
     }
   }
+}
+
+section {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }
 
 .subtitle {

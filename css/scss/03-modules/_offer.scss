@@ -154,3 +154,40 @@
         }
     }
 }
+
+
+.appreciated-map {
+    background-image: url("../images/map-bg.jpg");
+}
+
+.location-map {
+    margin: 0 auto;
+    width: 980px;
+    max-width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url("../images/location-map.png");
+    -webkit-background-size: auto 100%;
+         -o-background-size: auto 100%;
+            background-size: auto 100%;
+    &:after {
+        display: block;
+        content: "";
+        padding-top: 53%;
+    }
+    p {
+        width: 420px;
+        position: absolute;
+        left: 47%;
+        top: 47%;
+        color: #FFF;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 36px;
+        text-align: left;
+        span {
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+    }
+}
