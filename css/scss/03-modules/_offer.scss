@@ -241,3 +241,34 @@
         }
     }
 }
+
+.bg-beige {
+    background: #F7F7F7;
+}
+.features {
+    margin-top: 60px;
+}
+.features-list {
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    p {
+        margin-bottom: 20px;
+        line-height: 22px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+.features-form {
+    position: relative;
+    &>img {
+        position: absolute;
+        top: -42%;
+        right: 15px;
+    }
+    .form {
+        position: relative;
+        z-index: 2;
+    }
+}
