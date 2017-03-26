@@ -1,5 +1,5 @@
 .offer {
-    height: 800px;
+    height: 705px;
     max-height: 100%;
     @include flex($direction: column, $alignI: center, $justify: center);
     
@@ -13,54 +13,80 @@
         margin-bottom: 40px;
         text-transform: uppercase;
     }
+
+    &__info {
+        width: calc(100% - 370px);
+        & > p {
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+    .form {
+        width: 370px;
+    }
+    .wrapper {
+        @include flex($alignI: flex-end);
+        text-align: left;
+        color: #FFF;
+    }
+    .framed {
+        margin-top: 40px;
+    }
 }
 
-/*
-.offer--slider {
-    height: 590px;
-    position: relative;
-    background: #3D8EB9;
-    @media (max-width: 600px) {
-        height: 500px;
+.framed {
+    width: 330px;
+    max-width: 100%;
+    @include flex($wrap: nowrap);
+    &__num {
+        border: 8px solid $red;
+        height: 120px;
+        min-width: 120px;
+        padding: 0 4px;
+        line-height: 110px;
+        text-align: center;
+        font-size: 42px;
+        font-weight: 800;
+        color: $red;
     }
-    .slick-track,
-    .slick-list {
-        height: 100%;
-    }
-    .slide {
-        @include flex($direction:column,$alignI:center, $justify:center);
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        -webkit-background-size: cover;
-             -o-background-size: cover;
-                background-size: cover;
-        @media (max-width: 800px) {
-            padding: 0 30px;
-        }
-        h1,
-        h2 {
-            color: #fff;
-            font-size: 50px;
-            font-weight: 700;
-             text-align: center;
-            @media (max-width: 1200px) {
-                font-size: 40px;
-            }
-            @media (max-width: 800px) {
-                font-size: 32px;
-            }
-            @media (max-width: 600px) {
-                font-size: 30px;
-            }
-        }
-        .button {
-            margin-top: 16px;
-        }
+    p {
+        font-size: 18px;
+        padding-left: 30px;
     }
 }
-*/
+
+.form {
+    width: 370px;
+    padding: 35px 40px 40px;
+    text-align: center;
+    color: #3D3D3D;
+    font-size: 16px;
+    background-color: #FFF;
+    &__title {
+        font-size: 26px;
+        color: #d60b52;
+        font-weight: 800;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+    p {
+        margin-bottom: 25px;
+        span {
+            color: #d60b52;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid #EBEBEB;
+        padding-left: 15px;
+        height: 45px;
+        font-size: 14px;
+        color: #999;
+    }
+    button {
+        width: 100%;
+    }
+}
