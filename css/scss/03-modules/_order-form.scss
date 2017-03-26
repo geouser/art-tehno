@@ -16,6 +16,11 @@
         width: 100%;
     }
 
+    .form {
+        padding: 0;
+        width: 100%;
+    }
+
     input {
         width: 100%;
         border: 1px solid #EBEBEB;
@@ -24,6 +29,7 @@
         font-weight: 300;
         font-size: 14px;
         color: #999999;
+        margin: 0;
     }
 
     &__title {
