@@ -6,6 +6,7 @@
     &-list {
         @media (max-width: 767px) {
             @include flex($alignI: flex-start);
+            margin: 0 -15px;
         }
 
         &__item {
@@ -20,6 +21,11 @@
             @media (max-width: 767px) {
                 width: 50%;
                 padding: 0 15px;
+                margin-top: 0;
+            }
+
+            @media (max-width: 500px) {
+                width: 100%;
             }
 
             .icon {
@@ -45,6 +51,7 @@
                     transform: none;
                     display: block;
                     margin: 0 auto;
+                    margin-bottom: 10px;
                 }
 
                 &:after {
@@ -87,6 +94,11 @@
                     width: 100%;
                     padding-left: 0;
                     text-align: center;
+                    font-size: 16px;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 14px;
                 }
 
                 span {
@@ -135,4 +147,12 @@
     font-size: 26px;
     letter-spacing: 0.02em;
     margin-top: 45px;
+
+    @media (max-width: 767px) {
+        margin-top: 15px;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 20px;
+    }
 }

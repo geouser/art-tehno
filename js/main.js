@@ -34,7 +34,33 @@ jQuery(document).ready(function($) {
         arrows: true,
         dots: false,
         slidesToShow: 5,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 440,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     })
 
     /*---------------------------
