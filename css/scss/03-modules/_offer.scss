@@ -1,5 +1,7 @@
 .offer {
     height: 705px;
+    padding-top: 90px;
+    padding-bottom: 20px;
     max-height: 100%;
     @include flex($direction: column, $alignI: center, $justify: center);
     
@@ -16,6 +18,7 @@
 
     &__info {
         width: calc(100% - 370px);
+        min-width: 200px;
         & > p {
             font-size: 30px;
             font-weight: 600;
@@ -28,6 +31,7 @@
         @include flex($alignI: flex-end);
         text-align: left;
         color: #FFF;
+        padding: 0;
     }
     .framed {
         margin-top: 40px;
