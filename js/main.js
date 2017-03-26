@@ -72,7 +72,10 @@ jQuery(document).ready(function($) {
             $element2 = $('header'),
             className = 'hasScrolled';
 
-        $document.scroll(function() {
+        $element.toggleClass(className, $document.scrollTop() >= 1);
+        $element2.toggleClass(className, $document.scrollTop() >= 1);
+
+        $document.on('ready scroll', function(event) {
             $element.toggleClass(className, $document.scrollTop() >= 1);
             $element2.toggleClass(className, $document.scrollTop() >= 1);
         });
