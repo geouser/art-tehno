@@ -161,7 +161,7 @@
 }
 
 .location-map {
-    margin: 0 auto;
+    margin: -90px auto 0;
     width: 980px;
     max-width: 100%;
     position: relative;
@@ -188,6 +188,56 @@
         span {
             font-weight: 800;
             text-transform: uppercase;
+        }
+    }
+}
+
+.where-grid > div {
+    margin-bottom: 30px;
+}
+.where-example {
+    position: relative;
+    color: #FFF;
+    width: 100%;
+    height: 235px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    &--tall {
+        height: 500px;
+        p {
+            bottom: auto;
+            top: 25px;
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    p {
+        position: absolute;
+        bottom: 18px;
+        text-align: left;
+        padding: 0 25px;
+        font-size: 14px;
+        left:0;
+        font-weight: 600;
+        max-width: 70%;
+        span {
+            display: block;
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+    }
+    &.text-right {
+        p {
+            text-align: right;
+            left: auto;
+            right: 0;
         }
     }
 }
